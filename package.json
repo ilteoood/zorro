@@ -1,0 +1,48 @@
+{
+  "name": "@ilteoood/zorro",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A powerful adapter that enables Zustand stores to connect to Redux DevTools remote server for debugging and state inspection.",
+  "main": "zorro.js",
+  "types": "zorro.d.ts",
+  "scripts": {
+    "build": "tsc --build --clean && tsc",
+    "dev": "redux-devtools --hostname=localhost --port=8000",
+    "dev:open": "redux-devtools --hostname=localhost --port=8000 --open"
+  },
+  "keywords": [
+    "zustand",
+    "redux-devtools",
+    "remote",
+    "react-native",
+    "debugging",
+    "state-management",
+    "devtools"
+  ],
+  "author": "Matteo Pietro Dazzi",
+  "license": "MIT",
+  "dependencies": {
+    "@types/socketcluster-client": "^19.1.0",
+    "rn-host-detect": "^1.2.0",
+    "socketcluster-client": "^19.2.7",
+    "zustand": "^4.4.0"
+  },
+  "devDependencies": {
+    "@redux-devtools/cli": "^4.0.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "dist/zorro.js",
+    "dist/zorro.d.ts",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilteoood/zorro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ilteoood/zorro/issues"
+  },
+  "homepage": "https://github.com/ilteoood/zorro#readme"
+}
