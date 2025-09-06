@@ -70,29 +70,6 @@ const useStore = create(
 | `realtime` | `boolean` | `false` | Enable/disable realtime connection to DevTools |
 | `enabled` | `boolean` | `true` | Enable/disable DevTools |
 
-## Usage Examples
-
-### Basic Usage
-
-```javascript
-import { create } from 'zustand';
-import { remoteDevtools } from './zustand-redux-devtools-adapter';
-
-const useCounterStore = create(
-  remoteDevtools(
-    (set, get) => ({
-      count: 0,
-      increment: () => set((state) => ({ count: state.count + 1 })),
-      decrement: () => set((state) => ({ count: state.count - 1 })),
-      reset: () => set({ count: 0 }),
-    }),
-    {
-      name: 'Counter Store',
-    }
-  )
-);
-```
-
 ## Limitations
 
 Due to limitations with the Remote DevTools, time travel features like reset, commit, rollback and jump to state are not available.
