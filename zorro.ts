@@ -1,6 +1,6 @@
+import getHostForRN from "rn-host-detect";
 import { create as createSocket } from "socketcluster-client";
 import { type StateCreator, type StoreMutatorIdentifier } from "zustand";
-import getHostForRN from 'rn-host-detect';
 
 type RemoteDevtoolsOptions = {
   name?: string;
@@ -8,6 +8,7 @@ type RemoteDevtoolsOptions = {
   port?: number;
   realtime?: boolean;
   secure?: boolean;
+  enabled?: boolean;
 };
 
 const generateArray = (length: number) => Array.from({ length }, (_, i) => i);
@@ -28,11 +29,18 @@ export const remoteDevtools = <
   options: RemoteDevtoolsOptions = {}
 ): StateCreator<T, Mps, Mcs> => {
   return (set, get, api) => {
-    const socket = createSocket({
-      hostname: options.hostname || getHostForRN("localhost"),
-      port: options.port || 8000,
-      secure: options.secure || false,
-    });
+    const {
+      hostname = getHostForRN("localhost"),
+      port = 8000,
+      secure = false,
+      enabled = true,
+    } = options;
+
+    if (!enabled) {
+      return fn(set, get, api);
+    }
+
+    const socket = createSocket({ hostname, port, secure });
 
     const instanceId = options.name || "Zustand Store";
     let nextActionId = 0;
