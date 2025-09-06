@@ -8,7 +8,9 @@
   "scripts": {
     "build": "tsc --build --clean && tsc",
     "dev": "redux-devtools --hostname=localhost --port=8000",
-    "dev:open": "redux-devtools --hostname=localhost --port=8000 --open"
+    "dev:open": "redux-devtools --hostname=localhost --port=8000 --open",
+    "lint": "biome check",
+    "lint:fix": "biome check --write"
   },
   "keywords": [
     "zustand",
@@ -28,6 +30,7 @@
     "zustand": "^4.4.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.2.3",
     "@redux-devtools/cli": "^4.0.0",
     "@types/node": "^22.0.0",
     "typescript": "^5.0.0"

@@ -16,11 +16,6 @@
     "resolveJsonModule": true,
     "noImplicitAny": false
   },
-  "include": [
-    "zorro.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "include": ["zorro.ts"],
+  "exclude": ["node_modules", "dist"]
 }

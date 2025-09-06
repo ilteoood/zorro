@@ -1,6 +1,6 @@
 import getHostForRN from "rn-host-detect";
 import { create as createSocket } from "socketcluster-client";
-import { type StateCreator, type StoreMutatorIdentifier } from "zustand";
+import type { StateCreator, StoreMutatorIdentifier } from "zustand";
 
 type RemoteDevtoolsOptions = {
   name?: string;
@@ -23,10 +23,10 @@ const ACTION_TYPES = {
 export const remoteDevtools = <
   T,
   Mps extends [StoreMutatorIdentifier, unknown][] = [],
-  Mcs extends [StoreMutatorIdentifier, unknown][] = []
+  Mcs extends [StoreMutatorIdentifier, unknown][] = [],
 >(
   fn: StateCreator<T, Mps, Mcs>,
-  options: RemoteDevtoolsOptions = {}
+  options: RemoteDevtoolsOptions = {},
 ): StateCreator<T, Mps, Mcs> => {
   return (set, get, api) => {
     const {
@@ -62,7 +62,7 @@ export const remoteDevtools = <
     const sendMessage = (
       type: string,
       payload: unknown,
-      forceSend?: boolean
+      forceSend?: boolean,
     ) => {
       if (forceSend || !isPaused) {
         socket.transmit("log", {
@@ -93,7 +93,7 @@ export const remoteDevtools = <
           isLocked: false,
           isPaused,
         },
-        true
+        true,
       );
     };
 
@@ -113,7 +113,7 @@ export const remoteDevtools = <
                 isPaused = action.status;
                 pushNewState(
                   get(),
-                  isPaused ? ACTION_TYPES.PAUSED : ACTION_TYPES.RESUMED
+                  isPaused ? ACTION_TYPES.PAUSED : ACTION_TYPES.RESUMED,
                 );
                 sendActualState();
                 break;
@@ -138,7 +138,7 @@ export const remoteDevtools = <
         sendMessage("ACTION", newState);
       }) as typeof set,
       get,
-      api
+      api,
     );
   };
 };
