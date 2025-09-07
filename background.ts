@@ -1,8 +1,8 @@
-import { DEFAULT_CONFIG } from "./src/zorro/zorro.config";
+import { DEFAULT_CONFIG, type ZorroConfig } from "./src/zorro/zorro.config";
 
 export const withRozeniteReduxDevTools = <T>(
   config: T,
-  remoteDevtoolsConfig: typeof DEFAULT_CONFIG,
+  remoteDevtoolsConfig: ZorroConfig,
 ): T => {
   import("@redux-devtools/cli").then(({ default: devToolsCli }) => {
     devToolsCli({

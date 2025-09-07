@@ -1,15 +1,6 @@
 import { create as createSocket } from "socketcluster-client";
 import type { StateCreator, StoreMutatorIdentifier } from "zustand";
-import { DEFAULT_CONFIG } from "./zorro.config";
-
-type RemoteDevtoolsOptions = {
-  name?: string;
-  hostname?: string;
-  port?: number;
-  realtime?: boolean;
-  secure?: boolean;
-  enabled?: boolean;
-};
+import { DEFAULT_CONFIG, type ZorroConfig } from "./zorro.config";
 
 const generateArray = (length: number) => Array.from({ length }, (_, i) => i);
 
@@ -26,7 +17,7 @@ export const remoteDevtools = <
   Mcs extends [StoreMutatorIdentifier, unknown][] = [],
 >(
   fn: StateCreator<T, Mps, Mcs>,
-  options: RemoteDevtoolsOptions = {},
+  options: ZorroConfig = {},
 ): StateCreator<T, Mps, Mcs> => {
   return (set, get, api) => {
     const { hostname, port, secure, enabled } = {

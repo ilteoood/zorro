@@ -1,16 +1,18 @@
 import { join, resolve } from "node:path";
 import { defineConfig } from "vite";
-import { viteStaticCopy } from 'vite-plugin-static-copy'
+import dts from "vite-plugin-dts";
+import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
   root: __dirname,
   base: "./",
   plugins: [
+    dts({ rollupTypes: true }),
     viteStaticCopy({
       targets: [
         {
-          src: 'README.md',
-          dest: './',
+          src: "README.md",
+          dest: "./",
         },
       ],
     }),
@@ -22,9 +24,7 @@ export default defineConfig({
     minify: true,
     sourcemap: false,
     lib: {
-      entry: {
-        zorro: resolve(join(__dirname, "src", "zorro", "zorro.ts")),
-      },
+      entry: resolve(join(__dirname, "src", "zorro", "zorro.ts")),
       name: "zorro",
     },
   },
