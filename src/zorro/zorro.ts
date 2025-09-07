@@ -1,6 +1,6 @@
-import getHostForRN from "rn-host-detect";
 import { create as createSocket } from "socketcluster-client";
 import type { StateCreator, StoreMutatorIdentifier } from "zustand";
+import { DEFAULT_CONFIG } from "./zorro.config";
 
 type RemoteDevtoolsOptions = {
   name?: string;
@@ -29,12 +29,10 @@ export const remoteDevtools = <
   options: RemoteDevtoolsOptions = {},
 ): StateCreator<T, Mps, Mcs> => {
   return (set, get, api) => {
-    const {
-      hostname = getHostForRN("localhost"),
-      port = 8000,
-      secure = false,
-      enabled = true,
-    } = options;
+    const { hostname, port, secure, enabled } = {
+      ...DEFAULT_CONFIG,
+      ...options,
+    };
 
     if (!enabled) {
       return fn(set, get, api);
