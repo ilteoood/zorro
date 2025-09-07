@@ -1,9 +1,20 @@
 import { join, resolve } from "node:path";
 import { defineConfig } from "vite";
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 export default defineConfig({
   root: __dirname,
   base: "./",
+  plugins: [
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'README.md',
+          dest: './',
+        },
+      ],
+    }),
+  ],
   build: {
     outDir: "./dist",
     emptyOutDir: false,
@@ -12,7 +23,7 @@ export default defineConfig({
     sourcemap: false,
     lib: {
       entry: {
-        zorro: resolve(join(__dirname, "src", "zorro.ts")),
+        zorro: resolve(join(__dirname, "src", "zorro", "zorro.ts")),
       },
       name: "zorro",
     },
