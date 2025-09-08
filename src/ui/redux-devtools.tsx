@@ -1,3 +1,1 @@
-import { App } from "@redux-devtools/app";
-
-export const ReduxDevTools = () => <App />;
+export const ReduxDevTools = () => <iframe title="Redux Devtools" src="http://localhost:8000" />
