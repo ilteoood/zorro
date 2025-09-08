@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "type": "module",
   "description": "A powerful adapter that enables Zustand stores to connect to Redux DevTools remote server for debugging and state inspection.",
+  "private": false,
   "scripts": {
     "build": "rozenite build",
     "dev": "redux-devtools --hostname=localhost --port=8000 & rozenite dev",
