@@ -59,6 +59,15 @@ const useStore = create(
 );
 ```
 
+### 3. Configure with Rozenite (optional)
+
+```javascript
+import { withRozeniteReduxDevTools } from '@ilteoood/zorro/metro'
+
+# Wrap your `withRozenite` config with `withRozeniteReduxDevTools`
+export default withRozeniteReduxDevTools(withRozenite(...))
+```
+
 ## Configuration Options
 
 | Option | Type | Default | Description |
