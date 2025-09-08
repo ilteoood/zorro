@@ -1,5 +1,5 @@
 import { NoticeBadge } from "../notice-badge/notice-badge";
-import { ReduxDevTools } from "../redux-devtools";
+import { ReduxDevTools } from "../redux-devtools/redux-devtools";
 
 import panelStyle from "./panel.module.css";
 
