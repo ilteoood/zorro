@@ -1,0 +1,13 @@
+diff --git a/node_modules/rn-host-detect/index.js b/node_modules/rn-host-detect/index.js
+index a075ca5..e003a61 100644
+--- a/node_modules/rn-host-detect/index.js
++++ b/node_modules/rn-host-detect/index.js
+@@ -71,7 +71,7 @@ function getByRNRequirePolyfill(hostname) {
+     return originalWarn.apply(console, arguments)
+   }
+   try {
+-    NativeModules = window.require('NativeModules')
++    NativeModules = require('react-native').NativeModules
+   } catch (e) {}
+   console.warn = originalWarn
+   if (!NativeModules) return hostname

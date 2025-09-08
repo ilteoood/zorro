@@ -7,7 +7,8 @@
     "build": "rozenite build",
     "dev": "redux-devtools --hostname=localhost --port=8000 & rozenite dev",
     "lint": "biome check",
-    "lint:fix": "biome check --write"
+    "lint:fix": "biome check --write",
+    "postinstall": "patch-package"
   },
   "main": "./dist/react-native.cjs",
   "module": "./dist/react-native",
@@ -39,7 +40,7 @@
     "@rozenite/plugin-bridge": "1.0.0-alpha.12",
     "rn-host-detect": "^1.2.0",
     "socketcluster-client": "^19.2.7",
-    "zustand": "^5.0.8"
+    "zustand": ">=5.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.3",
@@ -50,6 +51,7 @@
     "@types/react": "~18.3.24",
     "@types/rn-host-detect": "^1.2.2",
     "@types/socketcluster-client": "^19.1.0",
+    "patch-package": "^8.0.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-native": "0.76.0",
@@ -59,10 +61,10 @@
     "vite": "^6.3.5"
   },
   "peerDependencies": {
+    "@redux-devtools/cli": ">=4.0.0",
     "react": "*",
     "react-native": "*",
-    "zustand": ">=5.0.0",
-    "@redux-devtools/cli": ">=4.0.0"
+    "zustand": ">=5.0.0"
   },
   "files": [
     "dist",
