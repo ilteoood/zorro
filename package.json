@@ -11,11 +11,12 @@
   },
   "exports": {
     ".": {
-      "types": "./dist/zorro.d.ts",
+      "types": "./dist/src/zorro/zorro.d.ts",
       "import": "./dist/zorro.js",
       "require": "./dist/zorro.umd.cjs"
     },
     "./bundler": {
+      "types": "./dist/metro.d.ts",
       "import": "./dist/metro.js",
       "require": "./dist/metro.cjs"
     }
@@ -52,8 +53,7 @@
     "react-native-web": "0.21.0",
     "rozenite": "1.0.0-alpha.12",
     "typescript": "^5.7.3",
-    "vite": "^6.3.5",
-    "vite-plugin-dts": "^4.5.4"
+    "vite": "^6.3.5"
   },
   "peerDependencies": {
     "react": "*",
