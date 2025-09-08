@@ -20,7 +20,13 @@ export const remoteDevtools = <
   options: ZorroConfig = {},
 ): StateCreator<T, Mps, Mcs> => {
   return (set, get, api) => {
-    const { hostname, port, secure, enabled, name: instanceId } = {
+    const {
+      hostname,
+      port,
+      secure,
+      enabled,
+      name: instanceId,
+    } = {
       ...DEFAULT_CONFIG,
       ...options,
     };
