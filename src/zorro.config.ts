@@ -1,4 +1,16 @@
-import getHostForRN from "rn-host-detect";
+const getRnHostname = (): string => {
+  const getDevServer = require('react-native/Libraries/Core/Devtools/getDevServer');
+  const devServer = getDevServer();
+  return devServer.url.split('://')[1].split(':')[0];
+};
+
+const getHostname = (hostname: string): string => {
+  try {
+    return getRnHostname();
+  } catch {
+    return hostname;
+  }
+}
 
 export type ZorroConfig = {
   name?: string;
@@ -11,7 +23,7 @@ export type ZorroConfig = {
 
 export const DEFAULT_CONFIG: Required<ZorroConfig> = {
   name: "Zustand Store",
-  hostname: getHostForRN("localhost"),
+  hostname: getHostname("localhost"),
   port: 8000,
   realtime: true,
   secure: false,
