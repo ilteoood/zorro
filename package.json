@@ -7,8 +7,7 @@
     "build": "rozenite build && vite build --config vite.zorro.config.ts",
     "dev": "redux-devtools --hostname=localhost --port=8000 & rozenite dev",
     "lint": "biome check",
-    "lint:fix": "biome check --write",
-    "postinstall": "rozenite build && vite build --config vite.zorro.config.ts"
+    "lint:fix": "biome check --write"
   },
   "exports": {
     ".": {
@@ -59,7 +58,8 @@
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
-    "zustand": ">=5.0.0"
+    "zustand": ">=5.0.0",
+    "@redux-devtools/cli": ">=4.0.0"
   },
   "files": [
     "dist",
