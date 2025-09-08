@@ -1,6 +1,6 @@
 import { create as createSocket } from "socketcluster-client";
 import type { StateCreator, StoreMutatorIdentifier } from "zustand";
-import { DEFAULT_CONFIG, type ZorroConfig } from "./zorro.config";
+import { DEFAULT_CONFIG, type ZorroConfig } from "./src/zorro.config";
 
 const generateArray = (length: number) => Array.from({ length }, (_, i) => i);
 

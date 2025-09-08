@@ -4,18 +4,18 @@
   "type": "module",
   "description": "A powerful adapter that enables Zustand stores to connect to Redux DevTools remote server for debugging and state inspection.",
   "scripts": {
-    "build": "rozenite build && vite build --config vite.zorro.config.ts",
+    "build": "rozenite build",
     "dev": "redux-devtools --hostname=localhost --port=8000 & rozenite dev",
     "lint": "biome check",
     "lint:fix": "biome check --write"
   },
   "exports": {
     ".": {
-      "types": "./dist/src/zorro/zorro.d.ts",
-      "import": "./dist/zorro.js",
-      "require": "./dist/zorro.umd.cjs"
+      "types": "./dist/react-native.d.ts",
+      "import": "./dist/react-native.js",
+      "require": "./dist/react-native.cjs"
     },
-    "./bundler": {
+    "./metro": {
       "types": "./dist/metro.d.ts",
       "import": "./dist/metro.js",
       "require": "./dist/metro.cjs"

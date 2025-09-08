@@ -1,4 +1,4 @@
-import { DEFAULT_CONFIG, type ZorroConfig } from "./src/zorro/zorro.config";
+import { DEFAULT_CONFIG, type ZorroConfig } from "./src/zorro.config";
 
 export const withRozeniteReduxDevTools = <T>(
   config: T,

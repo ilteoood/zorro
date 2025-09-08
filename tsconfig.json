@@ -16,6 +16,6 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src/**/*", "metro.ts"],
+  "include": ["src/**/*", "metro.ts", "react-native.ts"],
   "exclude": ["node_modules", "dist", "build"]
 }
