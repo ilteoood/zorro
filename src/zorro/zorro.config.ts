@@ -9,7 +9,7 @@ export type ZorroConfig = {
   enabled?: boolean;
 };
 
-export const DEFAULT_CONFIG: ZorroConfig = {
+export const DEFAULT_CONFIG: Required<ZorroConfig> = {
   name: "Zustand Store",
   hostname: getHostForRN("localhost"),
   port: 8000,
