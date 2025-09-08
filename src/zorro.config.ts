@@ -1,7 +1,8 @@
 const getRnHostname = (): string => {
-  const getDevServer = require('react-native/Libraries/Core/Devtools/getDevServer');
+  const getDevServer =
+    require("react-native/Libraries/Core/Devtools/getDevServer").default;
   const devServer = getDevServer();
-  return devServer.url.split('://')[1].split(':')[0];
+  return devServer.url.split("://")[1].split(":")[0];
 };
 
 const getHostname = (hostname: string): string => {
@@ -10,7 +11,7 @@ const getHostname = (hostname: string): string => {
   } catch {
     return hostname;
   }
-}
+};
 
 export type ZorroConfig = {
   name?: string;
