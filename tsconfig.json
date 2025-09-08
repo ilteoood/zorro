@@ -16,6 +16,6 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src/**/*", "background.ts"],
+  "include": ["src/**/*", "metro.ts"],
   "exclude": ["node_modules", "dist", "build"]
 }
