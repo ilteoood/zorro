@@ -16,7 +16,10 @@
       "import": "./dist/zorro.js",
       "require": "./dist/zorro.umd.cjs"
     },
-    "./bundler": "./dist/background.cjs"
+    "./bundler": {
+      "import": "./dist/metro.js",
+      "require": "./dist/metro.cjs"
+    }
   },
   "keywords": [
     "zustand",
