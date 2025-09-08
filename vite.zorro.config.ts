@@ -1,22 +1,11 @@
 import { join, resolve } from "node:path";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
-import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
   root: __dirname,
   base: "./",
-  plugins: [
-    dts({ rollupTypes: true }),
-    viteStaticCopy({
-      targets: [
-        {
-          src: "README.md",
-          dest: "./",
-        },
-      ],
-    }),
-  ],
+  plugins: [dts({ rollupTypes: true })],
   build: {
     outDir: "./dist",
     emptyOutDir: false,
