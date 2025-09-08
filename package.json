@@ -9,6 +9,9 @@
     "lint": "biome check",
     "lint:fix": "biome check --write"
   },
+  "main": "./dist/react-native.cjs",
+  "module": "./dist/react-native",
+  "types": "./dist/react-native.d.ts",
   "exports": {
     ".": {
       "types": "./dist/react-native.d.ts",
