@@ -56,7 +56,8 @@
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "zustand": ">=5.0.0"
   },
   "files": [
     "dist",
