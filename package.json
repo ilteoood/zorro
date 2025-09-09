@@ -1,6 +1,6 @@
 {
   "name": "@ilteoood/zorro",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "A powerful adapter that enables Zustand stores to connect to Redux DevTools remote server for debugging and state inspection.",
   "private": false,
