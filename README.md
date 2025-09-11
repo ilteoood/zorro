@@ -29,6 +29,17 @@ npm install @ilteoood/zorro
 
 ### 1. Start the Redux DevTools Remote Server
 
+#### If you use Rozenite
+
+```javascript
+import { withRozeniteReduxDevTools } from '@ilteoood/zorro/metro'
+
+# Wrap your `withRozenite` config with `withRozeniteReduxDevTools`
+export default withRozeniteReduxDevTools(withRozenite(...))
+```
+
+#### Or manually
+
 ```bash
 # Start the remote server on default port 8000
 redux-devtools --hostname=localhost --port=8000
@@ -57,15 +68,6 @@ const useStore = create(
     }
   )
 );
-```
-
-### 3. Configure with Rozenite (optional)
-
-```javascript
-import { withRozeniteReduxDevTools } from '@ilteoood/zorro/metro'
-
-# Wrap your `withRozenite` config with `withRozeniteReduxDevTools`
-export default withRozeniteReduxDevTools(withRozenite(...))
 ```
 
 ## Configuration Options
