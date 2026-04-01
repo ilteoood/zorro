@@ -2,7 +2,7 @@
 console.log("🧪 Testing Zorro...");
 
 import { create } from "zustand";
-import { remoteDevtools } from "./dist/zorro.js";
+import { remoteDevtools } from "./dist/react-native.js";
 
 console.log("📦 devtools function imported:", typeof remoteDevtools);
 
