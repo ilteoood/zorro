@@ -10,20 +10,21 @@
     "lint": "biome check",
     "lint:fix": "biome check --write"
   },
-  "main": "./dist/react-native.cjs",
-  "module": "./dist/react-native",
-  "types": "./dist/react-native.d.ts",
+  "main": "./dist/react-native/index.cjs",
+  "module": "./dist/react-native/index.js",
+  "types": "./dist/react-native/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/react-native.d.ts",
-      "import": "./dist/react-native.js",
-      "require": "./dist/react-native.cjs"
+      "types": "./dist/react-native/index.d.ts",
+      "import": "./dist/react-native/index.js",
+      "require": "./dist/react-native/index.cjs"
     },
     "./metro": {
-      "types": "./dist/metro.d.ts",
-      "import": "./dist/metro.js",
-      "require": "./dist/metro.cjs"
-    }
+      "types": "./dist/metro/index.d.ts",
+      "import": "./dist/metro/index.js",
+      "require": "./dist/metro/index.cjs"
+    },
+    "./package.json": "./package.json"
   },
   "keywords": [
     "zustand",
