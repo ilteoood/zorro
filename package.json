@@ -64,6 +64,14 @@
     "react-native": ">=0.81.0",
     "zustand": ">=5.0.0"
   },
+  "overrides": {
+    "electron": "^42.3.3",
+    "tar": "^7.5.11",
+    "uuid": "^13.0.1",
+    "@tootallnate/once": "^2.0.1",
+    "@apollo/server": "^5.5.0",
+    "brace-expansion": "^5.0.6"
+  },
   "files": [
     "dist",
     "README.md"
