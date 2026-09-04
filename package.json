@@ -40,7 +40,7 @@
   "dependencies": {
     "@rozenite/plugin-bridge": "1.13.0",
     "socketcluster-client": "^20.0.1",
-    "zustand": ">=5.0.12"
+    "zustand": ">=5.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.7",
@@ -51,7 +51,7 @@
     "@types/react": "~19.2.14",
     "@types/socketcluster-client": "^20.0.0",
     "react": "19.2.8",
-    "react-dom": "19.2.5",
+    "react-dom": "19.2.8",
     "react-native": "0.86.2",
     "react-native-web": "0.21.2",
     "rozenite": "1.13.0",
