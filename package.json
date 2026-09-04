@@ -54,7 +54,7 @@
     "react-dom": "19.2.5",
     "react-native": "0.86.2",
     "react-native-web": "0.21.2",
-    "rozenite": "1.12.0",
+    "rozenite": "1.13.0",
     "typescript": "^6.0.3",
     "vite": "^7.3.2"
   },
