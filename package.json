@@ -52,7 +52,7 @@
     "@types/socketcluster-client": "^20.0.0",
     "react": "19.2.8",
     "react-dom": "19.2.8",
-    "react-native": "0.86.2",
+    "react-native": "0.87.1",
     "react-native-web": "0.21.2",
     "rozenite": "1.13.0",
     "typescript": "^6.0.3",
