@@ -43,7 +43,7 @@
     "zustand": ">=5.0.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.7",
+    "@biomejs/biome": "2.5.11",
     "@redux-devtools/cli": "4.0.4",
     "@rozenite/vite-plugin": "1.13.0",
     "@types/css-modules": "^1.0.5",
