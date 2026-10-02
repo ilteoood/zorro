@@ -10,19 +10,18 @@
     "lint": "biome check",
     "lint:fix": "biome check --write"
   },
-  "main": "./dist/react-native/index.cjs",
-  "module": "./dist/react-native/index.js",
-  "types": "./dist/react-native/index.d.ts",
+  "main": "./dist/react-native/cjs/react-native.js",
+  "module": "./dist/react-native/react-native.js",
+  "types": "./dist/react-native/react-native.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/react-native/index.d.ts",
-      "import": "./dist/react-native/index.js",
-      "require": "./dist/react-native/index.cjs"
+      "types": "./dist/react-native/react-native.d.ts",
+      "import": "./dist/react-native/react-native.js",
+      "require": "./dist/react-native/cjs/react-native.js"
     },
     "./metro": {
-      "types": "./dist/metro/index.d.ts",
-      "import": "./dist/metro/index.js",
-      "require": "./dist/metro/index.cjs"
+      "types": "./dist/metro/metro.d.ts",
+      "default": "./dist/metro/metro.js"
     },
     "./package.json": "./package.json"
   },
@@ -54,7 +53,7 @@
     "react-dom": "19.2.8",
     "react-native": "0.87.1",
     "react-native-web": "0.21.2",
-    "rozenite": "1.13.0",
+    "rozenite": "2.4.0",
     "typescript": "^6.0.3",
     "vite": "^7.3.2"
   },
