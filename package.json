@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.15",
-    "@redux-devtools/cli": "4.0.4",
+    "@redux-devtools/cli": "6.0.0",
     "@rozenite/vite-plugin": "2.5.0",
     "@types/css-modules": "^1.0.5",
     "@types/node": "^26.4.1",
@@ -64,7 +64,7 @@
     "zustand": ">=5.0.0"
   },
   "overrides": {
-    "electron": "^42.11.8",
+    "electron": "^42.11.18",
     "tar": "^7.5.11",
     "uuid": "^13.0.1",
     "@tootallnate/once": "^2.0.1",
