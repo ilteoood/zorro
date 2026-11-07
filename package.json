@@ -55,7 +55,7 @@
     "react-native-web": "0.21.4",
     "rozenite": "2.5.0",
     "typescript": "^6.0.3",
-    "vite": "^7.3.2"
+    "vite": "^8.3.5"
   },
   "peerDependencies": {
     "@redux-devtools/cli": "4.0.3",
